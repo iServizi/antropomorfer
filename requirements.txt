@@ -1,0 +1,6 @@
+streamlit
+openai
+pillow
+requests
+httpx
+boto3
