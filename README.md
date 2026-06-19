@@ -5,8 +5,8 @@ Szczegóły projektu — spełnienie wymagań na ocenę 5 oraz rekomendacja na L
 - **Backend** — skrypt napisany w języku Python
 - **Frontend** — interfejs użytkownika w formie aplikacji webowej opartej na frameworku Streamlit
 - **Integracja z modelem AI** — komunikacja z zewnętrznym modelem LLM OpenAI `gpt-5.2` w celu orkiestracji procesu rozpoznawania obrazu oraz generowania wyników przy użyciu zdefiniowanych narzędzi
-- **Integracja z modelem AI** — komunikacja z zewnętrznym modelem OpenAI `gpt-image-1` (image + prompt to image), który został użyty w zdefiniowanym narzędziu w celu transformacji zwierzęcia na człowieka, na podstawie załadowanego zdjęcia oraz z wykorzystaniem rozbudowanego promptingu — definicja narzędzia **animal_transformer.py**
-- **Integracja z modelem AI** — komunikacja z zewnętrznym modelem `gemini-flash-lite-latest`, który został użyty w zdefiniowanym narzędziu w celu rozpoznania zwierzęcia na załadowanym zdjęciu — definicja narzędzia **image_tools.py**
+- **Integracja z modelem AI** — komunikacja z zewnętrznym modelem OpenAI `gpt-image-1` (image + prompt to image), który został użyty w zdefiniowanym narzędziu w celu transformacji zwierzęcia na człowieka, na podstawie załadowanego zdjęcia oraz z wykorzystaniem rozbudowanego promptingu — definicja narzędzia w **animal_transformer.py**
+- **Integracja z modelem AI** — komunikacja z zewnętrznym modelem `gemini-flash-lite-latest`, który został użyty w zdefiniowanym narzędziu w celu rozpoznania zwierzęcia na załadowanym zdjęciu — definicja narzędzia w **image_tools.py**
 - **Integracja z chmurą AWS** — komunikacja z zewnętrznym serwisem Amazon S3 w celu zapisywania, przechowywania oraz wyświetlania wygenerowanych obrazów w galerii aplikacji
 
 ## 🚀 Link do aplikacji
