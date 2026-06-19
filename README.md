@@ -19,8 +19,8 @@ Szczegóły projektu — spełnienie wymagań na ocenę 5 oraz rekomendacja na L
 
 - OpenAI API token
 - Opcjonalnie w celu uzycia wlasnego Gemini API Key oraz polaczenia z wlasnym AWS S3 bucket: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_S3_BUCKET_NAME, AWS_REGION, GEMINI_API_KEY
-  
-## Struktura plikow
+
+Struktura plikow
 SRC/
 │
 ├── tools/
