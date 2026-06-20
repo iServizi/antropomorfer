@@ -318,16 +318,16 @@ def render_progress_bar(progress: float) -> str:
     
     return f"""
     <style>
-        /* Ukrywa obracającą się kropkę */
-        div[data-testid="stSpinnerIcon"] {{
-            display: none !important;
-            visibility: hidden !important;
-            width: 0 !important;
-            height: 0 !important;
+        div[data-testid="stSpinner"] {{
+            text-align: center !important;
+            width: 100% !important;
         }}
-        /* Ukrywa kontener, w którym Streamlit trzyma domyślny spinner */
         div[data-testid="stSpinner"] > div {{
-            display: none !important;
+            display: inline-flex !important;
+            justify-content: center !important;
+            align-items: center !important;
+            width: 100% !important;
+            margin: 0 auto !important;
         }}
     </style>
 
@@ -499,8 +499,8 @@ with tab_gen:
                 except json.JSONDecodeError:
                     continue
 
-        #if ostatni_output and ostatni_output.get("message") == "Transformaiton img created.":
-        if ostatni_output and ostatni_output.get("status") == "success":
+        #if ostatni_output and ostatni_output.get("message") == "Transformation img created.":
+        if ostatni_output and ostatni_output.get("status") == "success_transform":    
             output_image = st.session_state.get("final_output_image")
             
             if output_image is not None:
