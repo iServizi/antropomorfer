@@ -24,7 +24,7 @@ def generate_no_animal_image() -> tuple:
     draw = ImageDraw.Draw(img)
 
     text = "NO ANIMAL ON THE PHOTO"
-    font_size = 55
+    font_size = 45
 
     try:
         font = ImageFont.truetype("arial.ttf", size=font_size)
