@@ -499,7 +499,8 @@ with tab_gen:
                 except json.JSONDecodeError:
                     continue
 
-        if ostatni_output and ostatni_output.get("message") == "Transformaiton img created.":
+        #if ostatni_output and ostatni_output.get("message") == "Transformaiton img created.":
+        if ostatni_output and ostatni_output.get("status") == "success":
             output_image = st.session_state.get("final_output_image")
             
             if output_image is not None:
