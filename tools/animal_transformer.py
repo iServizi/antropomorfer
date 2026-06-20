@@ -28,7 +28,7 @@ def save_image_from_response(response) -> Image.Image:
     return Image.open(io.BytesIO(image_data))
 
 
-def transform_animal_to_human(sex: str, image: Image.Image) -> Image.Image:
+def transform_animal_to_human(sex: str, image: Image.Image)  -> tuple[dict, Image.Image]:
     """
     Directly executes the gpt-image-1 API edit call with the master prompt rules.
     Downloads the resulting generation and returns a live PIL Image object and operation status.
@@ -121,12 +121,25 @@ Follow these instructions EXACTLY:
         size="1024x1024",
     )
 
-    transform_img = save_image_from_response(response)
-    llm_status = {
-        "status": "success",
-        "message": "Transformation img created."
+    #transform_img = save_image_from_response(response)
+    #llm_status = {
+    #    "status": "success",
+    #    "message": "Transformation img created."
+    #    }
+    
+    try:
+        transform_img = save_image_from_response(response)
+        llm_status = {
+            "status": "success_transform",
+            "message": "Transformation img created."
         }
+    except Exception as e:
+        transform_img = None
+        llm_status = {
+            "status": "error",
+            "message": str(e)
 
+        }
     return llm_status, transform_img
 
 tools = [
