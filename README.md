@@ -26,4 +26,5 @@ SRC/
 ├── antropomorfer.png           # Logo / grafika główna
 ├── README.md                   # Dokumentacja projektu
 └── streamlit_app.py            # Główny plik uruchomieniowy (UI)
+└── requirements.txt            # Wymagane pakiety
 ```
