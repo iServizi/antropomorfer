@@ -37,7 +37,7 @@ def transform_animal_to_human(sex: str, image: Image.Image) -> Image.Image:
             sex: Sex parameter for the transformation.
             image: Image to be transformed.
     Returns:
-        Transformaiton status and transformed image.
+        Transformation status and transformed image.
     """
     api_key = os.getenv("OPENAI_API_KEY") 
     if not api_key:
@@ -124,7 +124,7 @@ Follow these instructions EXACTLY:
     transform_img = save_image_from_response(response)
     llm_status = {
         "status": "success",
-        "message": "Transformaiton img created."
+        "message": "Transformation img created."
         }
 
     return llm_status, transform_img
